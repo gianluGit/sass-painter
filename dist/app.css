@@ -4,3 +4,69 @@
   box-sizing: border-box;
 }
 
+header {
+  background-color: #1a1a1a;
+}
+
+header div#header-contact {
+  height: 50px;
+  width: 80%;
+  margin: auto;
+}
+
+header div#header-contact div.flex-header-contact {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+header div#header-contact div.flex-header-contact > i {
+  color: blue;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+header div#header-contact div.flex-header-contact a {
+  color: grey;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+header div#header-contact div.flex-header-contact a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+header div.navbar-menu {
+  width: 70%;
+  height: 50px;
+  margin: auto;
+  display: flex;
+}
+
+header div.navbar-menu div.logo {
+  margin-right: 30px;
+}
+
+header div.navbar-menu span {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: calc(100% / 8);
+  cursor: pointer;
+}
+
+header div.navbar-menu span > * {
+  color: #fff;
+  text-decoration: none;
+  align-self: center;
+}
+
+header div.navbar-menu span:hover {
+  background-color: #fff;
+}
+
+header div.navbar-menu span:hover > * {
+  color: #1a1a1a;
+}
+
