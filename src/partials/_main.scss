@@ -1,0 +1,114 @@
+main#main {
+
+  div.navbar-fix {
+    background-color: $bg_main;
+    height: 80px;
+
+    & ul {
+      width: 80%;
+      height: 100%;
+      margin: auto;
+
+      display: flex;
+      line-height: 80px;
+
+      & > li {
+        list-style: none;
+        width: 150px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.5);
+        }
+
+      }
+
+    }
+
+  }
+
+  section#screen-intro {
+    // height: 900px;
+    background-color: pink;
+
+    div.intro-container {
+      text-align: center;
+      padding-top: 100px;
+      color: #fff;
+
+      & p {
+        margin: 25px 0;
+        font-size: 20px;
+      }
+
+      & > a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+
+        & i {
+          color: darkgrey;
+          margin-right: 10px;
+          font-size: 25px;
+        }
+      }
+    }
+
+    div.img-intro {
+      text-align: center;
+      margin-top: 60px;
+    }
+  }
+
+  section#carousel {
+    // background-image: url('imgs/sfondo-prova.png');
+
+    div.carousel-text {
+      text-align: center;
+      background-color: #fff;
+
+      h1 {
+        padding-top: 100px;
+      }
+
+      p {
+        font-size: 20px;
+        padding: 40px 300px;
+      }
+    }
+
+    div.carousel-img {
+      text-align: center;
+      position: relative;
+      background-color: #fff;
+
+      & img {
+        width: 50%;
+      }
+
+      & > i {
+        position: absolute;
+        transform: translateY(-50%);
+        font-size: 30px;
+        color: red;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.3;
+        }
+      }
+
+      i.next {
+        top: 50%;
+        right: 300px;
+      }
+
+      i.prev {
+        top: 50%;
+        left: 300px;
+      }
+    }
+  }
+
+}
