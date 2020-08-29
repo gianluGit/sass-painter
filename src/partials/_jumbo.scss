@@ -1,0 +1,156 @@
+div#jumbotron {
+  height: 450px;
+  background-image: url('imgs/jumbo.jpg');
+  background-position: 50% 0%;
+
+  div.jumbo-container {
+    width: 85%;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+
+    div.jumbo-left, div.jumbo-middle, div.jumbo-right {
+      height: 100%;
+      width: calc(100% / 3);
+
+    }
+
+    div.jumbo-middle {
+
+      padding: 30px 0;
+      color: #fff;
+
+      & > h3 {
+        margin: 15px 0;
+      }
+
+      & #Dbutton {
+        display: flex;
+        align-items: center;
+
+        width: 200px;
+        background-color: rgba(128, 128, 128, 0.5);
+        color: #fff;
+        text-decoration: none;
+        padding-left: 10px;
+        margin-top: 80px;
+
+        div.button-right {
+          display: flex;
+
+          & i {
+            align-self: center;
+
+            font-size: 25px;
+          }
+
+        }
+
+
+        div.button-right span {
+          font-size: 50px;
+          margin: 0 10px;
+        }
+
+      }
+
+      & ul li {
+        list-style: none;
+        margin: 10px 0;
+      }
+
+      & ul li > i {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+
+
+    }
+
+    div.jumbo-right {
+      display: flex;
+
+      & > .square {
+        position: relative;
+
+        width: 100%;
+        height: 95%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px 20px;
+
+        align-self: flex-end;
+
+        img {
+          position: absolute;
+          top: 20px;
+          right: 10px;
+        }
+
+
+        div.save40 {
+          display: flex;
+          justify-content: center;
+
+          width: 80px;
+          height: 40px;
+          background-color: purple;
+          color: #fff;
+          margin-bottom: 10px;
+
+          & > span {
+            align-self: center;
+          }
+        }
+
+        div.square-container > span {
+          display: block;
+          color: grey;
+        }
+
+        span#prize-discount {
+          color: #fff;
+          font-size: 30px;
+        }
+
+        & a#buy-button {
+          display: block;
+          width: 150px;
+          height: 30px;
+          background-color: blue;
+          color: #fff;
+          line-height: 30px;
+          text-align: center;
+          text-decoration: none;
+          margin: 30px 0;
+        }
+
+        div.customer {
+          background-color: #fff;
+          width: 100%;
+          padding: 10px;
+
+          & h3 {
+            margin-bottom: 5px;
+          }
+
+          & a {
+            display: block;
+            text-decoration: none;
+
+          }
+
+          & a:last-child {
+            margin-top: 5px;
+          }
+
+          & a:last-child:hover {
+            text-decoration: underline;
+          }
+
+
+        }
+      }
+    }
+  }
+}
