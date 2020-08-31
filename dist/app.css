@@ -40,23 +40,56 @@ header div.navbar-menu {
 header div.navbar-menu div.logo {
   margin-right: 30px;
 }
-header div.navbar-menu span {
+header div.navbar-menu > ul {
   display: flex;
-  justify-content: center;
+  width: 100%;
   height: 100%;
-  width: calc(100% / 8);
   cursor: pointer;
 }
-header div.navbar-menu span > * {
+header div.navbar-menu > ul > li {
+  width: calc(100% / 8);
+  list-style: none;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+}
+header div.navbar-menu > ul > li:hover {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+header div.navbar-menu > ul > li:hover > a {
+  color: #1a1a1a;
+}
+header div.navbar-menu > ul > li > a {
   color: #fff;
   text-decoration: none;
-  align-self: center;
 }
-header div.navbar-menu span:hover {
+header div.navbar-menu li.active_dropdown {
+  position: relative;
+}
+header div.navbar-menu li.active_dropdown:hover ul.dropdown {
+  display: block;
+}
+header div.navbar-menu ul.dropdown {
   background-color: #fff;
+  display: none;
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 9;
 }
-header div.navbar-menu span:hover > * {
+header div.navbar-menu ul.dropdown > li {
+  list-style: none;
+  text-align: left;
+  padding-left: 20px;
+}
+header div.navbar-menu ul.dropdown > li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+header div.navbar-menu ul.dropdown > li > a {
   color: #1a1a1a;
+  text-decoration: none;
 }
 
 div#jumbotron {
@@ -221,9 +254,19 @@ main#main section#screen-intro div.img-intro {
   text-align: center;
   margin-top: 60px;
 }
+main#main section#carousel {
+  background-color: #fff;
+  position: relative;
+}
+main#main section#carousel > img {
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  z-index: -1;
+}
 main#main section#carousel div.carousel-text {
   text-align: center;
-  background-color: #fff;
 }
 main#main section#carousel div.carousel-text h1 {
   padding-top: 100px;
@@ -235,7 +278,7 @@ main#main section#carousel div.carousel-text p {
 main#main section#carousel div.carousel-img {
   text-align: center;
   position: relative;
-  background-color: #fff;
+  padding-bottom: 100px;
 }
 main#main section#carousel div.carousel-img img {
   width: 50%;
@@ -257,4 +300,24 @@ main#main section#carousel div.carousel-img i.next {
 main#main section#carousel div.carousel-img i.prev {
   top: 50%;
   left: 300px;
+}
+main#main section#tools {
+  margin-top: 500px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+main#main .tools-text {
+  text-align: center;
+}
+main#main .tools-text h1 {
+  padding-top: 100px;
+}
+main#main .tools-text p {
+  padding: 40px 300px;
+}
+main#main div.tools-img {
+  text-align: center;
+}
+main#main div.tools-img img {
+  width: 50%;
 }

@@ -1,5 +1,5 @@
 header {
-  background-color: #1a1a1a;
+  background-color: $bg_first;
 
   div#header-contact {
     height: 50px;
@@ -43,29 +43,73 @@ header {
 
     display: flex;
 
-    span {
+    & > ul  {
       display: flex;
-      justify-content: center;
+      width: 100%;
 
+      & > li {
+        width: calc(100% / 8);
+        list-style: none;
+        height: 100%;
+        line-height: 50px;
+        text-align: center;
+
+        &:hover {
+          background-color: #fff;
+          color: $bg_first;
+        }
+
+        &:hover > a {
+          color: $bg_first;
+        }
+
+        & > a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+
+
+      }
       height: 100%;
-      width: calc(100% / 8);
       cursor: pointer;
 
-      & > * {
-        color: #fff;
-        text-decoration: none;
 
-        align-self: center;
+
+    }
+
+    li.active_dropdown {
+      position: relative;
+
+      &:hover ul.dropdown {
+        display: block;
       }
+    }
 
-      &:hover {
-        background-color: #fff;
+    ul.dropdown {
+      background-color: #fff;
+      display: none;
+      width: 250px;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: 9;
+
+      & > li {
+        list-style: none;
+        text-align: left;
+        padding-left: 20px;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+
+
+        & > a {
+          color: $bg_first;
+          text-decoration: none;
+        }
       }
-
-      &:hover > * {
-        color: #1a1a1a;
-      }
-
     }
 
   }
